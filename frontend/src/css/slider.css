@@ -1,0 +1,153 @@
+/* Global reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styl dla całego slidera */
+.slider {
+  position: relative;
+  width: 100%;
+  height: auto; /* Dostosowanie wysokości do zawartości */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Kontener na obrazy */
+.slider-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Zachowanie proporcji 16:9 */
+  max-height: 80vh; /* Ograniczenie maksymalnej wysokości */
+  overflow: hidden;
+  display: flex;
+}
+
+/* Wewnętrzny kontener z obrazami */
+.slider-inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Obrazy */
+.img-slider-img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Wypełnienie kontenera bez zniekształcenia obrazu */
+  object-position: center;
+}
+
+/* Przycisk nawigacyjny */
+.img-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.img-slider-btn:hover,
+.img-slider-btn:focus-visible {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.img-slider-btn.left {
+  left: 1rem;
+}
+
+.img-slider-btn.right {
+  right: 1rem;
+}
+
+/* Ikony w przyciskach */
+.img-slider-btn > * {
+  stroke: white;
+  fill: none;
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Dots nawigacyjne */
+.slider-dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.img-slider-dot-btn {
+  width: 1rem;
+  height: 1rem;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.img-slider-dot-btn.active {
+  background-color: orange;
+  transform: scale(1.3);
+}
+
+/* Nagłówek */
+.here {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.h1 {
+  font-size: 2rem;
+  color: orange;
+}
+
+.storys {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  margin: 1rem auto;
+  max-width: 20%;
+  text-align: center;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .slider-container {
+    height: auto;
+    aspect-ratio: 4 / 3; /* Zmiana proporcji dla mniejszych ekranów */
+  }
+
+  .img-slider-btn > * {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .h1 {
+    font-size: 1.5rem;
+  }
+
+  .storys {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-container {
+    aspect-ratio: 1 / 1; /* Proporcje kwadratowe dla bardzo małych ekranów */
+  }
+
+  .img-slider-dot-btn {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+}

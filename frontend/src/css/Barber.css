@@ -1,0 +1,501 @@
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Limelight&family=Yesteryear&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Work+Sans:ital");
+
+body {
+  font-family: "Work Sans", sans-serif; /* Jednolita czcionka */
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8),
+      rgba(20, 20, 20, 0.9)
+    ),
+    url("Lublin1.png") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  font-size: 18px; /* Poprawny rozmiar czcionki */
+  line-height: 1.6; /* Lepsza czytelność */
+  margin: 0;
+}
+.menu {
+  background-color: rgba(0, 0, 0, 0.9); /* Ciemne przezroczyste tło */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Dodanie cienia */
+  z-index: 2;
+  font-family: "Limelight", sans-serif;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3%;
+  border-bottom: 2px solid orange; /* Dodanie wyróżnienia */
+}
+.pole1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32%;
+  height: 100%;
+}
+.pole2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32%;
+
+  height: 100%;
+}
+.pole1 > div {
+  text-align: center;
+  display: inline-block;
+  height: 100%;
+  padding: 3%;
+  margin-left: 2%;
+  width: 100%;
+}
+.pole2 > div {
+  text-align: center;
+  display: inline-block;
+  height: 100%;
+  padding: 3%;
+  width: 100%;
+}
+.pole1 > div a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+.pole2 > div a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+.pole1 > div a:visited {
+  text-decoration: none;
+  color: white;
+}
+.pole2 > div a:visited {
+  text-decoration: none;
+  color: white;
+}
+.logo {
+  align-items: center;
+  justify-content: center;
+  display: inline;
+  width: 8%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.story {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8); /* Lekko przytłumiony biały tekst */
+  line-height: 1.6;
+  margin: 20px auto;
+  width: 80%;
+  text-align: center;
+}
+.pole1 > div:hover {
+  text-align: center;
+  cursor: pointer;
+  background-color: orange;
+  border-radius: 10px;
+}
+.pole2 > div:hover {
+  cursor: pointer;
+  background-color: orange;
+  border-radius: 10px;
+  text-align: center;
+}
+.welcome {
+  font-size: 20px;
+  width: 100%;
+  height: 20%;
+}
+.h1 {
+  font-size: 36px;
+  color: orange; /* Użycie pomarańczowego jako wyróżnienia */
+  font-family: "Great Vibes", cursive;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.picturesDiv {
+  margin-top: 3%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 1600px;
+}
+
+.picturesBox1,
+.picturesBox2,
+.picturesBox3,
+.picturesBox4,
+.picturesBox5 {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, background-color 0.5s ease;
+  cursor: pointer;
+  color: white; /* Stały kolor tekstu */
+}
+
+.picturesBox1:hover,
+.picturesBox2:hover,
+.picturesBox3:hover,
+.picturesBox4:hover,
+.picturesBox5:hover {
+  background-color: rgba(0, 0, 0, 0.6); /* Przyciemnienie */
+  transform: scale(1.05); /* Powiększenie na hover */
+}
+
+.picturesBox1 > p,
+.picturesBox2 > p,
+.picturesBox3 > p,
+.picturesBox4 > p,
+.picturesBox5 > p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  opacity: 0;
+}
+
+.picturesBox1:hover > p,
+.picturesBox2:hover > p,
+.picturesBox3:hover > p,
+.picturesBox4:hover > p,
+.picturesBox5:hover > p {
+  opacity: 1; /* Wyświetlanie tekstu na hover */
+}
+
+.picturesBox1 {
+  background-image: url("Obraz1.png");
+  color: white;
+}
+.picturesBox2 {
+  background-image: url("Obraz2.png");
+  color: white;
+}
+.picturesBox3 {
+  background-image: url("Obraz3.png");
+  color: black;
+}
+.picturesBox4 {
+  background-image: url("Obraz4.png");
+  color: orange;
+}
+.picturesBox5 {
+  background-image: url("Obaz5.png");
+  color: black;
+}
+
+/* Opcjonalne rotacje dla efektu */
+.picturesBox1 {
+  transform: rotate(-5deg);
+}
+.picturesBox2 {
+  transform: rotate(5deg);
+}
+.picturesBox3 {
+  transform: rotate(-3deg);
+}
+.picturesBox4 {
+  transform: rotate(3deg);
+}
+.picturesBox5 {
+  transform: rotate(-2deg);
+}
+.face {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 200px;
+
+  text-align: center;
+}
+.calender {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 80%;
+}
+
+.chairdresserSwap {
+  height: 100%;
+  display: flex;
+  justify-content: space-between; /* lub 'center', 'space-around' */
+  align-items: center; /* Wyrównanie elementów w pionie */
+}
+.buttonArrowLeft {
+  height: 30px;
+  width: 30%;
+  margin-left: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+}
+.buttonArrowRight {
+  height: 30px;
+  width: 30%;
+  margin-right: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+}
+.changeMont {
+  height: 100%;
+  display: flex;
+  justify-content: space-between; /* lub 'center', 'space-around' */
+  align-items: center;
+}
+.calenderTitle {
+  height: 100%;
+  display: flex;
+  justify-content: space-between; /* lub 'center', 'space-around' */
+  align-items: center; /* Wyrównanie elementów w pionie */
+}
+.daysName {
+  justify-content: center;
+  align-items: center;
+  margin-top: 8%;
+  background-color: rgba(0, 0, 0, 0);
+  display: grid;
+  grid-template-columns: repeat(7, 8%); /* 7 kolumn */
+  grid-auto-rows: 100%; /* Wysokość wiersza */
+  gap: 0px; /* Odstępy między elementami */
+}
+.daysNameEle {
+  background-color: rgba(0, 0, 0, 0);
+  height: 2%;
+}
+.days {
+  margin-top: 1%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  display: grid;
+  grid-template-columns: repeat(7, 8%); /* 7 kolumn */
+  grid-auto-rows: 60px; /* Wysokość wiersza */
+  gap: 1px; /* Odstępy między elementami */
+  place-items: center;
+  row-gap: 0px;
+}
+.oneDay {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.dayNo {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: orange;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.dayNo:hover {
+  background-color: orange;
+  cursor: pointer;
+  color: white;
+}
+.today {
+  color: orange;
+  border: solid 9px white;
+}
+
+.boxApoitment {
+  display: none; /* Domyślnie ukryty */
+  height: auto; /* Dopasowanie wysokości do treści */
+  width: 50%; /* Szerokość odpowiednia do proporcji */
+  background-color: rgba(0, 0, 0, 0.9); /* Lekko przezroczyste tło */
+  border: solid 3px white;
+  position: fixed; /* Umieszczenie na środku ekranu */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrowanie */
+  z-index: 100;
+  border-radius: 20px;
+  padding: 20px; /* Odstępy wewnętrzne */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Cień dla głębi */
+}
+#boxApoitment h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.temrinal {
+  position: fixed;
+}
+.hours {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Pięć kolumn */
+  gap: 10px;
+}
+.hours > div {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: solid 2px white;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.hours > div:hover {
+  background-color: orange;
+  color: black;
+}
+.x {
+  width: 8%;
+  height: 8%;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+#boxApoitment p {
+  color: orange;
+  font-size: 14px;
+  text-align: center;
+  margin: 10px 0;
+}
+#boxApoitment .terminal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.h2l:hover {
+  color: orange;
+  cursor: pointer;
+}
+.h1l:hover {
+  color: orange;
+  cursor: pointer;
+}
+.chooseServiceTab {
+  text-align: center;
+  margin: 20px 0;
+}
+.chooseTab {
+  width: 70%;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+.a {
+  text-decoration: none;
+}
+.x {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  filter: invert(100%);
+}
+.choosePerson {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.submit {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.active {
+  color: orange;
+}
+.pastDay {
+  background-color: grey;
+  color: darkgrey;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.fullyBooked {
+  color: red;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.available {
+  color: green;
+}
+.input {
+  width: 70%;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  margin-bottom: 3%;
+}
+.input.input:focus {
+  outline: none;
+  border: 1px solid orange;
+}
+.blockedHour {
+  color: red;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.doneApoitment {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: solid 2px orange;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+.x2 {
+  width: 8%;
+  height: 8%;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.sunday {
+  pointer-events: none;
+  color: red;
+  opacity: 0.5;
+}
+.days {
+  background-color: orange(0, 0, 0, 0);
+}
